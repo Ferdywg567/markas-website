@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c491b8531eec05ba41a11d9276a5749",
+    "content-hash": "e8839f27f5a3ef2dfc6436926c880c9b",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,72 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "dentro/yalr",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/digital-entropy/yalr.git",
+                "reference": "859f6cf34b9d471205c1a1fee79bc2a6ed859727"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/digital-entropy/yalr/zipball/859f6cf34b9d471205c1a1fee79bc2a6ed859727",
+                "reference": "859f6cf34b9d471205c1a1fee79bc2a6ed859727",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0|^9.0|^10.0",
+                "illuminate/contracts": "^8.0|^9.0|^10.0",
+                "illuminate/filesystem": "^8.0|^9.0|^10.0",
+                "illuminate/routing": "^8.0|^9.0|^10.0",
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.0",
+                "roave/security-advisories": "dev-latest",
+                "vimeo/psalm": "^5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dentro\\Yalr\\RouteServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dentro\\Yalr\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rifki Alhuraibi",
+                    "email": "veelasky@gmail.com"
+                },
+                {
+                    "name": "Muhajirin Ilyas",
+                    "email": "muhajirinlpu@gmail.com"
+                }
+            ],
+            "description": "Class base routing for laravel application.",
+            "support": {
+                "issues": "https://github.com/digital-entropy/yalr/issues",
+                "source": "https://github.com/digital-entropy/yalr/tree/v1.2.2"
+            },
+            "time": "2023-10-04T13:07:58+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -8077,5 +8143,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
