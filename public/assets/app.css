@@ -1,0 +1,21 @@
+.primary-color{
+    color: #da0027;
+}
+
+@media screen and (max-width: 980px){
+    .full-width-nav {
+        display: none;
+    }
+    .min-width-nav{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 981px){
+    .full-width-nav {
+        display: flex;
+    }
+    .min-width-nav{
+        display: none;
+    }
+}
