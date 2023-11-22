@@ -14,4 +14,8 @@ class HomeController extends Controller
         return view('home');
     }
 
+	#[Get('/about','about')]
+	function about() : View {
+		return view('about');
+	}
 }
