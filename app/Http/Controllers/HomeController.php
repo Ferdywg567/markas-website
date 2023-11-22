@@ -14,4 +14,13 @@ class HomeController extends Controller
         return view('home');
     }
 
+	#[Get('/about','about')]
+	function about() : View {
+		return view('about');
+	}
+
+	#[Get('/event','event')]
+	function event() : View {
+		return view('event');
+	}
 }
