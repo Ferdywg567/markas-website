@@ -5,12 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    @stack('pre-style')
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('./assets/app.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    @stack('post-style')
     <title>Markas</title>
 </head>
 
+<body>
 {{--begin full width nav--}}
 <nav class="navbar bg-body-tertiary full-width-nav" style="background-image: url({{asset('')}}./assets/img/bg-nav.png)">
     <div class="container-fluid">
@@ -35,7 +41,8 @@
 {{--end full width nav--}}
 
 {{--begin responsive nav--}}
-<nav class="navbar navbar-expand-lg bg-light min-width-nav" style="background-image: url({{asset('')}}./assets/img/bg-nav.png)">
+<nav class="navbar navbar-expand-lg bg-light min-width-nav"
+     style="background-image: url({{asset('')}}./assets/img/bg-nav.png)">
     <div class="container-fluid">
         <a class="navbar-brand ms-5" href="#">
             <svg width="182" height="66" viewBox="0 0 182 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +51,8 @@
                     fill="#D90027"/>
             </svg>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,10 +81,113 @@
 </nav>
 {{--end responsive nav--}}
 
-<body>
+@stack('body')
 
+
+<footer>
+    <div class="w-100 bg-primary-color">
+        <div class="container pe-0"
+             style="transform: translateY(-4rem);background-image: url({{asset('./assets/img/bg-footer.png')}});border-radius: 24px;border-style: solid;
+             border-width: 2px;border-color: #1a202c;background-position: center center;background-repeat: no-repeat;">
+            <div class="ps-3 pt-3">
+                <div class="row mt-4">
+                    <div class="col">
+                        <img class="w-100" src="{{asset('')}}assets/images/logo/Markas/Logo-17.png">
+                        <p class="text-sm-start fs-6 lh-sm ms-3" style="letter-spacing: 1px">
+                            MARKAS adalah tempat kolaborasi atau yang lebih dikenal dengan space yang bertujuan menjadi
+                            wadah tempat masyarakat melakukan perintisan Startup di kota-kota seluruh Indonesia maupun
+                            tempat belajar bagi para peminat teknologi perusahaan digital.
+                        </p>
+
+                        <div class="d-flex align-items-center flex-row ms-3 ">
+                            <svg class="d-inline-flex" width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_703_100)">
+                                    <path
+                                        d="M18.2338 3.2835C23.1056 3.2835 23.6825 3.30487 25.5985 3.39034C27.3791 3.46869 28.3407 3.76784 28.9817 4.01713C29.8293 4.34476 30.4418 4.74363 31.0758 5.37754C31.7168 6.01857 32.1085 6.62399 32.4362 7.47157C32.6855 8.1126 32.9846 9.08127 33.0629 10.8548C33.1484 12.7779 33.1698 13.3548 33.1698 18.2195C33.1698 23.0914 33.1484 23.6683 33.0629 25.5843C32.9846 27.3649 32.6855 28.3264 32.4362 28.9675C32.1085 29.8151 31.7097 30.4276 31.0758 31.0615C30.4347 31.7025 29.8293 32.0943 28.9817 32.4219C28.3407 32.6712 27.372 32.9704 25.5985 33.0487C23.6754 33.1342 23.0985 33.1555 18.2338 33.1555C13.3619 33.1555 12.785 33.1342 10.869 33.0487C9.08839 32.9704 8.12685 32.6712 7.48582 32.4219C6.63823 32.0943 6.02569 31.6954 5.39178 31.0615C4.75075 30.4205 4.35901 29.8151 4.03137 28.9675C3.78208 28.3264 3.48293 27.3578 3.40459 25.5843C3.31912 23.6612 3.29775 23.0842 3.29775 18.2195C3.29775 13.3477 3.31912 12.7708 3.40459 10.8548C3.48293 9.07415 3.78208 8.1126 4.03137 7.47157C4.35901 6.62399 4.75787 6.01144 5.39178 5.37754C6.03281 4.73651 6.63823 4.34476 7.48582 4.01713C8.12685 3.76784 9.09552 3.46869 10.869 3.39034C12.785 3.30487 13.3619 3.2835 18.2338 3.2835ZM18.2338 0C13.2836 0 12.6639 0.0213677 10.7195 0.106838C8.78212 0.192309 7.4502 0.505702 6.29635 0.954424C5.09263 1.42451 4.07411 2.04418 3.0627 3.0627C2.04418 4.07411 1.42451 5.09263 0.954424 6.28923C0.505702 7.4502 0.192309 8.775 0.106838 10.7123C0.0213677 12.6639 0 13.2836 0 18.2338C0 23.1839 0.0213677 23.8036 0.106838 25.7481C0.192309 27.6854 0.505702 29.0173 0.954424 30.1712C1.42451 31.3749 2.04418 32.3934 3.0627 33.4048C4.07411 34.4162 5.09263 35.043 6.28923 35.506C7.4502 35.9547 8.775 36.2681 10.7123 36.3536C12.6568 36.439 13.2765 36.4604 18.2266 36.4604C23.1768 36.4604 23.7965 36.439 25.7409 36.3536C27.6783 36.2681 29.0102 35.9547 30.1641 35.506C31.3607 35.043 32.3792 34.4162 33.3906 33.4048C34.402 32.3934 35.0288 31.3749 35.4917 30.1783C35.9405 29.0173 36.2539 27.6925 36.3393 25.7552C36.4248 23.8107 36.4462 23.1911 36.4462 18.2409C36.4462 13.2907 36.4248 12.671 36.3393 10.7266C36.2539 8.78924 35.9405 7.45733 35.4917 6.30347C35.043 5.09263 34.4234 4.07411 33.4048 3.0627C32.3934 2.0513 31.3749 1.42451 30.1783 0.961546C29.0173 0.512825 27.6925 0.199432 25.7552 0.113961C23.8036 0.0213677 23.184 0 18.2338 0Z"
+                                        fill="#000100"/>
+                                    <path
+                                        d="M18.2338 8.86768C13.0628 8.86768 8.86761 13.0629 8.86761 18.2338C8.86761 23.4048 13.0628 27.6 18.2338 27.6C23.4048 27.6 27.6 23.4048 27.6 18.2338C27.6 13.0629 23.4048 8.86768 18.2338 8.86768ZM18.2338 24.3094C14.8791 24.3094 12.1582 21.5886 12.1582 18.2338C12.1582 14.8791 14.8791 12.1583 18.2338 12.1583C21.5885 12.1583 24.3093 14.8791 24.3093 18.2338C24.3093 21.5886 21.5885 24.3094 18.2338 24.3094Z"
+                                        fill="#000100"/>
+                                    <path
+                                        d="M30.1569 8.49767C30.1569 9.7085 29.174 10.6843 27.9703 10.6843C26.7595 10.6843 25.7837 9.70138 25.7837 8.49767C25.7837 7.28683 26.7666 6.31104 27.9703 6.31104C29.174 6.31104 30.1569 7.29395 30.1569 8.49767Z"
+                                        fill="#000100"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_703_100">
+                                        <rect width="36.4675" height="36.4675" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <p class="d-inline-flex mt-3 p-2 fs-5 fw-bold">INSTAGRAM</p>
+
+                            <svg class="ms-5" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.45189 9.50051L0.780369 10.172L2.12341 11.5151L2.79493 10.8436L1.45189 9.50051ZM3.64289 0.105475L2.69322 0.105475L2.69322 2.00483H3.64289V0.105475ZM10.2906 8.65255V9.60223H12.19V8.65255H10.2906ZM2.79493 10.8436L11.9118 1.72667L10.5688 0.383628L1.45189 9.50051L2.79493 10.8436ZM3.64289 2.00483L11.2403 2.00483V0.105475L3.64289 0.105475V2.00483ZM11.2403 2.00483L12 2.00483L12 0.105476L11.2403 0.105475L11.2403 2.00483ZM12.19 8.65255L12.19 1.05515L10.2906 1.05515L10.2906 8.65255H12.19ZM12.19 1.05515L12.19 0.295409L10.2906 0.295411L10.2906 1.05515L12.19 1.05515Z"
+                                    fill="black"/>
+                            </svg>
+                        </div>
+
+                        <div class="d-flex align-items-center flex-row ms-3 translate-middle-y mt-2">
+                            <svg class="d-inline-flex" width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_703_105)">
+                                    <path
+                                        d="M36.1043 11.4078C36.1043 11.4078 35.7481 8.8935 34.6513 7.78951C33.2624 6.3365 31.7097 6.32938 30.9974 6.24391C25.8976 5.87353 18.2409 5.87354 18.2409 5.87354H18.2266C18.2266 5.87354 10.5699 5.87353 5.47013 6.24391C4.75787 6.32938 3.20515 6.3365 1.81625 7.78951C0.719379 8.8935 0.370373 11.4078 0.370373 11.4078C0.370373 11.4078 0 14.3636 0 17.3124V20.0759C0 23.0247 0.363251 25.9805 0.363251 25.9805C0.363251 25.9805 0.719379 28.4948 1.80913 29.5988C3.19803 31.0518 5.02141 31.0019 5.83338 31.1586C8.75363 31.4364 18.2338 31.5219 18.2338 31.5219C18.2338 31.5219 25.8976 31.5076 30.9974 31.1444C31.7097 31.0589 33.2624 31.0518 34.6513 29.5988C35.7481 28.4948 36.1043 25.9805 36.1043 25.9805C36.1043 25.9805 36.4675 23.0318 36.4675 20.0759V17.3124C36.4675 14.3636 36.1043 11.4078 36.1043 11.4078ZM14.4659 23.4307V13.1813L24.3164 18.3238L14.4659 23.4307Z"
+                                        fill="black"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_703_105">
+                                        <rect width="36.4675" height="36.4675" fill="white"
+                                              transform="translate(0 0.467773)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <p class="d-inline-flex mt-3 p-2 fs-5 fw-bold">YOUTUBE</p>
+
+                            <svg class="ms-5" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.45189 9.50051L0.780369 10.172L2.12341 11.5151L2.79493 10.8436L1.45189 9.50051ZM3.64289 0.105475L2.69322 0.105475L2.69322 2.00483H3.64289V0.105475ZM10.2906 8.65255V9.60223H12.19V8.65255H10.2906ZM2.79493 10.8436L11.9118 1.72667L10.5688 0.383628L1.45189 9.50051L2.79493 10.8436ZM3.64289 2.00483L11.2403 2.00483V0.105475L3.64289 0.105475V2.00483ZM11.2403 2.00483L12 2.00483L12 0.105476L11.2403 0.105475L11.2403 2.00483ZM12.19 8.65255L12.19 1.05515L10.2906 1.05515L10.2906 8.65255H12.19ZM12.19 1.05515L12.19 0.295409L10.2906 0.295411L10.2906 1.05515L12.19 1.05515Z"
+                                    fill="black"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col container mt-3 ms-5 ">
+                        <p class="primary-color fs-5 fw-light text-uppercase">REGIONAL</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">SURABAYA</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Jakarta</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Bandung</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">denpasar</p>
+                    </div>
+                    <div class="col container mt-3 ms-5 fw-light">
+                        <p class="primary-color fs-5 text-uppercase">CONTACT US</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Booking</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">FAQ</p>
+                    </div>
+                    <div class="col container mt-3 ms-5 fw-light">
+                        <p class="primary-color fs-5 text-uppercase">ABOUT</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Philosophy</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Event</p>
+                        <p class="primary-color fs-4 fw-bold text-black text-uppercase">Credits</p>
+                    </div>
+                </div>
+            </div>
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 overflow-hidden">
+                    <img src="{{asset('')}}assets/images/logo/Markas/logo-transculent.png" style="transform: translate(96px,96px)">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
+
+@stack('pre-script')
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -86,4 +197,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+@stack('post-script')
 </html>
