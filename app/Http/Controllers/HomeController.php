@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     #[Get('/','home')]
     function index(){
-
+        return view('welcome');
     }
+
 }
