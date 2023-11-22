@@ -2,6 +2,20 @@
     color: #da0027;
 }
 
+.bg-primary-color{
+    background:#da0027;
+}
+
+
+html p a{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.img-rounded {
+    border-radius: 50%;
+
+}
+
 @media screen and (max-width: 980px){
     .full-width-nav {
         display: none;

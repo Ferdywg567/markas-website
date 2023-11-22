@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('sublocation');
             $table->string('full_address');
             $table->json('photos');
-            $table->json('facilites');
+            $table->json('facilities');
             $table->string('longitude');
             $table->string('latitude');
             $table->timestamps();

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('building_id')->constrained()->cascadeOnDelete();
             $table->string('type');
             $table->string('thumbnail');
             $table->string('name');

@@ -13,7 +13,8 @@
     <title>Markas</title>
 </head>
 
-<body class="bg-body-tertiary vh-100 vw-100" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
+<body class="bg-body-tertiary vh-100 vw-100 overflow-hidden"
+    style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
     {{-- begin full width nav --}}
     <nav class="navbar bg-body-tertiary" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
         <div class="container-fluid d-flex justify-content-between">
@@ -85,9 +86,15 @@
     {{-- end responsive nav --}}
 
     {{-- begin header section --}}
-    <div class="h-100 w-100"
-        style="background-image: url({{ asset('/assets/images/events/bg/Picture-event=Frame-7.png') }})">
-
+    <div class="h-100 w-100 position-relative overflow-hidden d-flex justify-content-center align-items-center">
+        <img class="w-100 position-absolute d-block" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"
+            src="{{ asset('/assets/images/events/bg/1696241419625.png') }}" alt="entah">
+        <div class="w-100 h-100 bg-black position-absolute"
+            style="opacity: 0.6; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+        <h4 class="">
+            Ini cerita tentang MARKAS kita...
+        </h4>
     </div>
     {{-- end header section --}}
 
