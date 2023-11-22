@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Dentro\Yalr\Attributes\Get;
+use Dentro\Yalr\Attributes\Prefix;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -14,4 +16,8 @@ class HomeController extends Controller
         return view('home');
     }
 
+	#[Get('/about','about')]
+	function about() : View {
+		return view('about');
+	}
 }

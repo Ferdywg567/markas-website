@@ -51,7 +51,8 @@ return [
 
     'web' => [
         /** @inject web **/
-        \App\Http\Controllers\HomeController::class
+        \App\Http\Controllers\HomeController::class,
+        \App\Http\Controllers\EventController::class,
     ],
     'api' => [
         /** @inject api **/
