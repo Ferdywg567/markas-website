@@ -434,8 +434,6 @@
                         <img class="mx-1 w-25" src="{{asset('')}}assets/images/meeting/Meeting2.png">
                     </div>
 
-
-
                     <div class="row mt-5 mb-5">
                         <div class="container text-center">
                             <button type="button" class="btn btn-lg px-5 bg-primary-color text-white"

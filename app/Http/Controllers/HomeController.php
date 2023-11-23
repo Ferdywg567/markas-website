@@ -35,4 +35,9 @@ class HomeController extends Controller
         // dd($building->photos);
 		return view('booking', compact('building'));
 	}
+
+    #[Get('/check-date','check-date')]
+    function checkRoomDate(){
+        return view('check-date');
+    }
 }
