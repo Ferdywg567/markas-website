@@ -39,7 +39,7 @@
                     <a class="navbar-brand ms-5 primary-color" href="{{ route('about') }}">About</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Philosophy</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Events</a>
-                    <a class="navbar-brand ms-5 primary-color" href="{{route('book')}}">Booking</a>
+                    <a class="navbar-brand ms-5 primary-color" href="#">Booking</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Contact Us</a>
                 </span>
             </div>
