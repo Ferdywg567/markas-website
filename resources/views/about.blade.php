@@ -234,31 +234,32 @@
 
             {{-- <h1 class="mb-5" style="font-weight: 900;">10 KARAKTER MARKAS</h1> --}}
 
-            <div class="mw-100 row g-5 my-5 py-5">
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/1000.png') }}" alt="1000startup">
-                </div>
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/Kominfo.png') }}" alt="kominfo">
-                </div>
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SSI.png') }}"
-                        alt="startup studio id">
-                </div>
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"
-                        alt="startup studio id">
-                </div>
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"
-                        alt="startup studio id">
-                </div>
-                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">
-                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"
-                        alt="startup studio id">
-                </div>
-            </div>
+{{--            <div class="mw-100 row g-5 my-5 py-5">--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/1000.png') }}" alt="1000startup">--}}
+{{--                </div>--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/Kominfo.png') }}" alt="kominfo">--}}
+{{--                </div>--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SSI.png') }}"--}}
+{{--                        alt="startup studio id">--}}
+{{--                </div>--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"--}}
+{{--                        alt="startup studio id">--}}
+{{--                </div>--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"--}}
+{{--                        alt="startup studio id">--}}
+{{--                </div>--}}
+{{--                <div class="col-4 rounded bg-white d-flex justify-content-center align-items-center">--}}
+{{--                    <img class="mw-100 mh-100" src="{{ asset('assets/images/logo/SekolahBeta.png') }}"--}}
+{{--                        alt="startup studio id">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
+            <img src='{{asset('')}}assets/images/home/partner.svg'>
             <a href="#" class="bg-primary-color rounded-pill border-none fs-3 px-5 mb-0 py-3 text-white fw-bold"
                 style="text-decoration: none;">
                 <span class="mx-4 py-1">Cari Tahu Lebih</span>
@@ -266,7 +267,7 @@
         </div>
     </div>
     {{-- end afiliasi section --}}
-    
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

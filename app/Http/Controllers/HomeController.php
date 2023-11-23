@@ -27,4 +27,9 @@ class HomeController extends Controller
         $events = Event::all();
 		return view('event', compact('events'));
 	}
+
+    #[Get('/check-date','check-date')]
+    function checkRoomDate(){
+        return view('check-date');
+    }
 }
