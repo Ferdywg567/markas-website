@@ -66,7 +66,7 @@
     {{-- begin header section --}}
     <div class="h-100 w-100">
         <div class="container p-0" style="padding: 8rem">
-            <h4 class="mb-5 subtitle-header primary-color text-center">
+            <h4 class="mb-5 subtitle-header primary-color text-center" style="margin-top: 8rem">
                 EVENT
             </h4>
             <h2 class="mb-5 header text-center">

@@ -77,12 +77,44 @@
             font-weight: 300;
             font-size: 20px;
         }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .facility-check {
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .divider {
+            margin: 18px 0;
+        }
+
+        .description-text {
+            color: #5A5A5A;
+        }
+
+        .place-name {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .facility-ul {
+            columns: 2;
+        }
     </style>
 @endpush
 
 @push('body')
     {{-- begin header section --}}
-    <div class="h-100 w-100">
+    <div class="h-100 w-100 mb-5" style="margin-top: 8rem">
         <div class="container p-0" style="padding: 8rem">
             <h4 class="mb-5 subtitle-header primary-color text-center">
                 BOOKING
@@ -124,12 +156,18 @@
 
             <div class="row gx-4">
                 <div class="col-8">
-                    <img class="rounded w-100" src="{{asset("assets/images/buildings/{$building->photos[0]}")}}" alt="{{$building->photos[0]}}">
+                    <img class="rounded w-100" src="{{ asset("assets/images/buildings/{$building->photos[0]}") }}"
+                        alt="{{ $building->photos[0] }}">
                 </div>
                 <div class="col-4 d-flex justify-content-between align-items-center flex-column">
-                    <img class="rounded w-100" style="height: 240px" src="{{asset("assets/images/buildings/{$building->photos[1]}")}}" alt="{{$building->photos[1]}}">
-                    <img class="rounded w-100" style="height: 240px" src="{{asset("assets/images/buildings/{$building->photos[2]}")}}" alt="{{$building->photos[2]}}">
-                    <div class="rounded w-100 border border-2 bg-transparent more-photos text-center border-black">+{{count($building->photos)-3}} Foto</div>
+                    <img class="rounded w-100" style="height: 240px"
+                        src="{{ asset("assets/images/buildings/{$building->photos[1]}") }}"
+                        alt="{{ $building->photos[1] }}">
+                    <img class="rounded w-100" style="height: 240px"
+                        src="{{ asset("assets/images/buildings/{$building->photos[2]}") }}"
+                        alt="{{ $building->photos[2] }}">
+                    <div class="rounded w-100 border border-2 bg-transparent more-photos text-center border-black">
+                        +{{ count($building->photos) - 3 }} Foto</div>
                 </div>
             </div>
 
@@ -142,6 +180,105 @@
                 <button class="building-item border border-black border-2 bg-transparent">Testimoni</button>
             </div>
 
+            <div class="facility-section" style="margin-bottom: 8rem;">
+                <h2 class="section-title mb-5">Fasilitas Gedung</h2>
+                <div class="row">
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Tempat Parkir</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Rak Sepatu</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Mini Kafe</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Perpustakaan</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Lounge</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Petugas Teknisi</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Air Conditioner</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Toilet</span>
+                    </div>
+                    <div class="col-4 p-4" style="visibility: hidden">
+                        <span class="facility-check">✅ Toilet</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Dispenser Air</span>
+                    </div>
+                    <div class="col-4 p-4">
+                        <span class="facility-check">✅ Internet</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Location-section" style="margin-bottom: 8rem">
+                <h2 class="section-title mb-5">Detail Lokasi</h2>
+                <div class="card p-4 border border-1 border-black shadow-none" style="border-radius: 30px">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 map">
+                                <img src="{{ asset('assets/images/map/map.png') }}" alt="map.png">
+                            </div>
+                            <div class="col-6">
+                                <h3 class="section-subtitle mb-3">
+                                    Detail Alamat
+                                </h3>
+                                <p class="description-text">{{ $building->full_address }}</p>
+                                <hr class="divider">
+                                <h3 class="section-subtitle mb-3">
+                                    Tempat Terdekat
+                                </h3>
+                                @foreach ($building->nearestPlaces as $item)
+                                    <div class="d-flex name-places justify-content-between align-items-center">
+                                        <b class="place-name">{{ $item->name }}</b>
+                                        <span class="description-text">{{ $item->estimed_minute_to_arrive }} Menit</span>
+                                    </div>
+                                    <p class="description-text">{{ $item->description }}</p>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-section" style="margin-bottom: 20rem">
+                <h2 class="section-title mb-5">Tipe Ruangan</h2>
+                @foreach ($building->rooms as $item)
+                    <div class="card p-3 border border-1 border-black shadow-none mb-5" style="border-radius: 30px">
+                        <div class="card-body">
+                            <h4 class="place-name mb-4">{{ strtoupper($item->type) }}</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="w-100" src="{{ asset("assets/images/rooms/$item->thumbnail") }}"
+                                        alt="{{ $item->thumbnail }}">
+                                </div>
+                                <div class="col-6">
+                                    <h3 class="section-subtitle mb-3 primary-color" style="letter-spacing: .3rem">
+                                        {{ strtoupper($item->name) }}
+                                    </h3>
+                                    <p class="description-text mb-3">{{ $item->description }}</p>
+                                    <p class="primary-color">Fasilitas:</p>
+                                    <ul class="facility-ul">
+                                        @foreach ($item->facilities as $facility)
+                                            <li>{{ $facility }}</li>
+                                        @endforeach
+                                    </ul>
+                                <p class="primary-color">Kapasitas Maksimal: {{$item->max_person}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
             {{-- <div class="row gy-5">
                 @foreach ($events as $item)
                     <div class="col-4">
@@ -150,10 +287,10 @@
                 @endforeach
             </div> --}}
 
-            <div class="booking-hero">
+            {{-- <div class="booking-hero">
                 <h2 class="mb-5 header text-center primary-color">MARI BERKOLABORASI</h2>
                 <button class="border-0 btn-booking d-block mx-auto" style="border-radius: 100px">BOOKING</button>
-            </div>
+            </div> --}}
 
 
         </div>
