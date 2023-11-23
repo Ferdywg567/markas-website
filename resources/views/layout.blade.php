@@ -72,13 +72,13 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Philosophy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('git') }}">Events</a>
+                        <a class="nav-link" href="{{ route('event') }}">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('booking') }}">Booking</a>
@@ -94,8 +94,7 @@
 
     @stack('body')
 
-
-    <footer>
+    <footer class="mt-5 pt-5">
         <div class="w-100 bg-primary-color">
             <div class="container pe-0"
                 style="transform: translateY(-4rem);background-image: url({{ asset('./assets/img/bg-footer.png') }});border-radius: 24px;border-style: solid;
