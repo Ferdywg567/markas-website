@@ -19,7 +19,7 @@
     <title>Markas</title>
 </head>
 
-<body class="bg-body-tertiary vh-100 vw-100">
+<body class="bg-body-tertiary w-100" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
     {{-- begin full width nav --}}
     <nav class="navbar full-width-nav bg-body-tertiary" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
         <div class="container-fluid d-flex justify-content-between">
