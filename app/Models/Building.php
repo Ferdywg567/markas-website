@@ -23,6 +23,16 @@ class Building extends Model
      */
     public function rooms()
     {
-        return $this->hasMany(Room::class, 'room_id', 'id');
+        return $this->hasMany(Room::class, 'building_id', 'id');
+    }
+
+    /**
+     * Get all of the nearestPlaces for the Building
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function nearestPlaces()
+    {
+        return $this->hasMany(NearestPlace::class, 'building_id', 'id');
     }
 }
