@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Dentro\Yalr\Attributes\Get;
 use Dentro\Yalr\Attributes\Prefix;
 use Illuminate\Contracts\View\View;
@@ -20,9 +21,10 @@ class HomeController extends Controller
 	function about() : View {
 		return view('about');
 	}
-  
+
 	#[Get('/event','event')]
 	function event() : View {
-		return view('event');
+        $events = Event::all();
+		return view('event', compact('events'));
 	}
 }

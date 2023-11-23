@@ -19,14 +19,44 @@
         .light-placeholder::placeholder {
             color: #BCBCBC;
             font-weight: 300;
+            font-size: 28px;
+        }
+
+        .event-category {
+            padding: 12px 20px;
+            font-size: 28px;
+            border-radius: 50px;
+            border: 0;
+            background: transparent;
+            font-weight: 600;
+            transition: all .5s ease-out;
+        }
+
+        .event-category.active {
+            background-color: #DA1F3E;
+        }
+
+        .search-form {
+            padding: 2rem !important;
+            border-radius: 100px 0 0 100px;
+        }
+        .booking-hero {
+            padding: 20rem 0;
+        }
+        .btn-booking {
+            background-color: #D90027;
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            padding: 1rem 6rem;
         }
     </style>
 @endpush
 
 @push('body')
     {{-- begin header section --}}
-    <div class="h-100 w-100" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
-        <div class="container" style="padding: 8rem">
+    <div class="h-100 w-100">
+        <div class="container p-0" style="padding: 8rem">
             <h4 class="mb-5 subtitle-header primary-color text-center">
                 EVENTI
             </h4>
@@ -34,11 +64,11 @@
                 IKUTI KEGIATAN DIMARKAS
             </h2>
 
-            <div class="input-group shadow-lg" style="margin-bottom: 8rem; border-radius: 30px">
-                <input class="form-control form-control-lg py-3 px-4 border-0 light-placeholder" type="text"
-                    placeholder="Cari event yang ada di MARKAS Surabaya" style="border-radius: 30px 0 0 30px;">
+            <div class="input-group shadow-lg" style="border-radius: 100px">
+                <input class="form-control form-control-lg search-form py-3 px-4 border-0 light-placeholder" type="text"
+                    placeholder="Cari event yang ada di MARKAS Surabaya">
                 <a class="btn bg-white pe-3 d-flex justify-content-center align-items-center" type="button"
-                    id="button-addon2" style="border-radius: 0 30px 30px 0;">
+                    id="button-addon2" style="border-radius: 0 100px 100px 0;">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -48,8 +78,44 @@
                 </a>
             </div>
 
+            <div class="border border-2 border-black p-2 w-100 d-flex justify-content-around align-items-center text-center"
+                style="border-radius: 70px; margin: 6rem 0;">
+                <button class="event-category active">Kegiatan Hari Ini</button>
+                <button class="event-category">Minggu Ini</button>
+                <button class="event-category">Meeting</button>
+                <button class="event-category">Workshop</button>
+                <button class="event-category">Talkshow</button>
+            </div>
+
+            <div class="row gy-5">
+                @foreach ($events as $item)
+                    <div class="col-4">
+                        <img src="{{asset("assets/images/events/flyer/$item->thumbnail")}}" alt="{{$item->thumbnail}}">
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="booking-hero">
+                <h2 class="mb-5 header text-center primary-color">MARI BERKOLABORASI</h2>
+                <button class="border-0 btn-booking d-block mx-auto" style="border-radius: 100px">BOOKING</button>
+            </div>
+
 
         </div>
     </div>
     {{-- end header section --}}
+@endpush
+
+@push('post-script')
+    <script>
+        $(document).ready(function() {
+            $(".event-category").click(function(e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+
+                $(this).siblings().removeClass('active');
+
+            });
+        });
+    </script>
 @endpush
