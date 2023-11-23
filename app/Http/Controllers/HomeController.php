@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Building;
 use App\Models\Event;
 use Dentro\Yalr\Attributes\Get;
 use Dentro\Yalr\Attributes\Prefix;
@@ -27,4 +28,16 @@ class HomeController extends Controller
         $events = Event::all();
 		return view('event', compact('events'));
 	}
+
+    #[Get('/booking','booking')]
+	function booking() : View {
+        $building = Building::with(['rooms', 'nearestPlaces'])->first();
+        // dd($building->photos);
+		return view('booking', compact('building'));
+	}
+
+    #[Get('/check-date','check-date')]
+    function checkRoomDate(){
+        return view('check-date');
+    }
 }

@@ -44,7 +44,7 @@ class EventSeeder extends Seeder
             ]
         ];
 
-        for ($i = 1; $i < 2; $i++) {
+        for ($i = 0; $i < 2; $i++) {
             foreach ($datas as $key => $value) {
                 Event::create($value);
             }

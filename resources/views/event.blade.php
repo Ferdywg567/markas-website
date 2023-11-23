@@ -22,22 +22,31 @@
             font-size: 28px;
         }
 
-        .event-category {
+        .category-group {
+            gap: 20px;
+        }
+
+        .category-group button {
+            flex-grow: 1;
+        }
+
+        .btn-category {
             padding: 12px 20px;
             font-size: 28px;
             border-radius: 50px;
             border: 0;
             background: transparent;
             font-weight: 600;
-            transition: all .5s ease-out;
+            transition: all .3s ease-out;
         }
 
-        .event-category.active {
+        .btn-category.active {
             background-color: #DA1F3E;
+            color: white;
         }
 
         .search-form {
-            padding: 2rem !important;
+            padding: 1.6rem 2rem !important;
             border-radius: 100px 0 0 100px;
         }
         .booking-hero {
@@ -57,15 +66,15 @@
     {{-- begin header section --}}
     <div class="h-100 w-100">
         <div class="container p-0" style="padding: 8rem">
-            <h4 class="mb-5 subtitle-header primary-color text-center">
-                EVENTI
+            <h4 class="mb-5 subtitle-header primary-color text-center" style="margin-top: 8rem">
+                EVENT
             </h4>
             <h2 class="mb-5 header text-center">
                 IKUTI KEGIATAN DIMARKAS
             </h2>
 
             <div class="input-group shadow-lg" style="border-radius: 100px">
-                <input class="form-control form-control-lg search-form py-3 px-4 border-0 light-placeholder" type="text"
+                <input class="form-control form-control-lg search-form border-0 light-placeholder" type="text"
                     placeholder="Cari event yang ada di MARKAS Surabaya">
                 <a class="btn bg-white pe-3 d-flex justify-content-center align-items-center" type="button"
                     id="button-addon2" style="border-radius: 0 100px 100px 0;">
@@ -78,13 +87,13 @@
                 </a>
             </div>
 
-            <div class="border border-2 border-black p-2 w-100 d-flex justify-content-around align-items-center text-center"
+            <div class="category-group border border-2 border-black p-2 w-100 d-flex justify-content-around align-items-center text-center"
                 style="border-radius: 70px; margin: 6rem 0;">
-                <button class="event-category active">Kegiatan Hari Ini</button>
-                <button class="event-category">Minggu Ini</button>
-                <button class="event-category">Meeting</button>
-                <button class="event-category">Workshop</button>
-                <button class="event-category">Talkshow</button>
+                <button class="btn-category active">Kegiatan Hari Ini</button>
+                <button class="btn-category">Minggu Ini</button>
+                <button class="btn-category">Meeting</button>
+                <button class="btn-category">Workshop</button>
+                <button class="btn-category">Talkshow</button>
             </div>
 
             <div class="row gy-5">
@@ -109,7 +118,7 @@
 @push('post-script')
     <script>
         $(document).ready(function() {
-            $(".event-category").click(function(e) {
+            $(".btn-category").click(function(e) {
                 e.preventDefault();
                 $(this).toggleClass('active');
 
