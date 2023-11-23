@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-body-tertiary vh-100 vw-100"
-    style="background-image: url('{{ asset('') }}assets/img/bg-footer.png'); background-repeat: repeat; background-size: 100%">
+    style="background-image: url('{{ asset('') }}assets/img/bg-nav.png'); background-repeat: repeat; background-size: 100%">
     {{-- begin full width nav --}}
     <nav class="navbar full-width-nav bg-body-tertiary"
         style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
