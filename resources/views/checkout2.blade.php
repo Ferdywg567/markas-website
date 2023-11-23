@@ -21,7 +21,7 @@
 
 <body class="vh-100 vw-100"
     style="background-image: url('{{ asset('') }}assets/img/bg-nav.png'); background-repeat: repeat; background-size: 100%">
-    <form class="mx-5 px-5 min-vh-100" action="">
+    <form class="mx-5 px-5 d-flex flex-column min-vh-100" action="">
         <div class="my-3">
             <label for="name" class="form-label fw-bold fs-4 mb-3 ps-3">Nama</label>
             <input type="text" id="name" aria-describedby="emailHelp"
@@ -83,7 +83,17 @@
             <textarea class="form-control bg-transparent border border-2 border-dark px-4 py-3" name="decs" id="desc"
                 cols="30" rows="10" style="border-radius: 2.5rem;"></textarea>
         </div>
+
+        <div class="my-5 align-self-end border-none">
+            <button class="bg-primary-color border-none rounded-pill fs-2 px-5 mb-0 py-2 text-white fw-bold"
+                type="submit">
+                Pesan
+            </button>
+        </div>
     </form>
+
+    <div class="bg-primary-color" style="height: 0.5rem">
+    </div>
 </body>
 
 @stack('pre-script')
