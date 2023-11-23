@@ -32,13 +32,15 @@
             <label for="email" class="form-label fw-bold fs-4 mb-3 ps-3">Gender</label>
             <div class="px-3 d-flex">
                 <div class="form-check d-flex align-items-center me-4">
-                    <input class="form-check-input" type="radio" name="gender" id="gender1">
+                    <input class="form-check-input border border-2 border-dark" type="radio" name="gender"
+                        id="gender1">
                     <label class="ps-3 form-check-label fw-bold fs-4" for="gender1">
                         Male
                     </label>
                 </div>
                 <div class="form-check d-flex align-items-center">
-                    <input class="form-check-input" type="radio" name="gender" id="gender2" checked>
+                    <input class="form-check-input border border-2 border-dark" type="radio" name="gender"
+                        id="gender2" checked>
                     <label class="ps-3 form-check-label fw-bold fs-4" for="gender2">
                         Female
                     </label>
