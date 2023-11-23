@@ -76,7 +76,7 @@
     <section class="mt-5">
         <div class="container text-center">
             <div class="row justify-content-md-center">
-                <p class="fs-4 fw-bold text-center primary-color" style="letter-spacing: 2px">FILOSOFI</p>
+                <p class="fs-4 fw-bold text-center primary-color mt-5" style="letter-spacing: 2px">FILOSOFI</p>
                 <p class="fs-1 fw-bolder text-uppercase text-center">INKLUSIF dan KOLABORATIF</p>
                 <p class="fs-6 w-75 ps-5 pe-5 text-center">Sejak diinisiasi di tahun 2016, semangat
                     #1000StartupDigital adalah untuk berkolaborasi
@@ -85,19 +85,120 @@
             </div>
         </div>
 
-        <div class="container text-center p-2">
+        <div class="container p-2">
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('')}}assets/images/events/flyer/thumbnail1.png">
+                    <img class="rounded mw-100" src="{{ asset('assets/images/meeting/Meeting1.png') }}"
+                         alt="gambar-1">
+                    <p class="fs-5 mt-4 fw-light "><a class="primary-color text-decoration-none" href="#">Gain
+                            Knowledge</a></p>
+                    <p class="fs-3 fw-bold">Ruang Belajar</p>
+                    <p class="fs-5 mt-4 fw-light">MARKAS sangat mengedepankan
+                        kegunaan ruang untuk menunjang
+                        aktivitas penggunanya.</p>
                 </div>
                 <div class="col">
-                    <img src="{{asset('')}}assets/images/events/flyer/thumbnail2.png">
+                    <img class="rounded mw-100" src="{{ asset('assets/images/meeting/Meeting2.png') }}"
+                         alt="gambar-1">
+                    <p class="fs-5 mt-4 fw-light "><a class="primary-color text-decoration-none" href="#">Get
+                            Mentored</a></p>
+                    <p class="fs-3 fw-bold">Tempat Berkonsultasi</p>
+                    <p class="fs-5 mt-4 fw-light">Fasilitas pertemuan singkat
+                        maupun diskusi panjang untuk
+                        mengolah ide menjadi nyata.</p>
                 </div>
                 <div class="col">
-                    <img src="{{asset('')}}assets/images/events/flyer/thumbnail3.png">
+                    <img class="rounded mw-100" src="{{ asset('assets/images/meeting/Meeting3.png') }}"
+                         alt="gambar-1">
+                    <p class="fs-5 mt-4 fw-light "><a class="primary-color text-decoration-none" href="#">Expand
+                            Network</a></p>
+                    <p class="fs-3 fw-bold">Wadah Berkolaborasi</p>
+                    <p class="fs-5 mt-4 fw-light">Area kerja bersama yang dapat
+                        diakses para startup founder dan stakeholder
+                        startup.</p>
+                </div>
+                <div class="row mt-5"></div>
+                <div class="row mt-5 mb-5">
+                    <div class="container text-center">
+                        <button type="button" class="btn text-white btn-lg ps-5 pe-5"
+                                style="background: #da0027; border-radius: 64px">Cari Tahu Lebih
+                        </button>
+                    </div>
+                </div>
+                <div class="row mb-5"></div>
+            </div>
+        </div>
+    </section>
+    <section style="background: #da0027">
+        <div class="container p-4 text-center">
+            <div class="row mt-1">
+                <h1 class="fs-1 fw-bold text-white">Mari Berkolaborasi</h1>
+            </div>
+            <div class="row mt-5 mb-2">
+                <div class="container text-center">
+                    <button type="button" class="btn primary-color btn-lg ps-5 pe-5"
+                            style="background: #ffffff; border-radius: 64px">Booking
+                    </button>
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+        {{-- begin karakteristik section --}}
+        <div class="min-vw-100 min-vh-100 d-flex justify-content-center align-items-center my-5 py-5">
+            <div class="d-flex flex-column justify-content-center align-items-center mb-3" style="max-width: 79rem;">
+                <h3 class="mb-5 fw-bold primary-color" style="letter-spacing: .35rem;">KARAKTERISTIK</h3>
+                <svg width="566" height="36" viewBox="0 0 566 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.19701 32.648V5.384L8.97301 10.712L1.48501 14.024L0.0930088 5.528L9.93301 0.919998H16.413V32.648H7.19701ZM0.669009 35V26.792H23.085V35H0.669009ZM42.0866 35.48C38.8546 35.48 36.1026 34.808 33.8306 33.464C31.5906 32.088 29.8786 30.12 28.6946 27.56C27.5426 24.968 26.9666 21.848 26.9666 18.2C26.9666 14.552 27.5426 11.448 28.6946 8.888C29.8786 6.296 31.5906 4.328 33.8306 2.984C36.1026 1.608 38.8546 0.919998 42.0866 0.919998C45.3186 0.919998 48.0706 1.608 50.3426 2.984C52.6146 4.328 54.3266 6.296 55.4786 8.888C56.6626 11.448 57.2546 14.552 57.2546 18.2C57.2546 21.848 56.6626 24.968 55.4786 27.56C54.3266 30.12 52.6146 32.088 50.3426 33.464C48.0706 34.808 45.3186 35.48 42.0866 35.48ZM42.0866 27.56C44.0386 27.56 45.5426 26.76 46.5986 25.16C47.6866 23.528 48.2306 21.208 48.2306 18.2C48.2306 15.064 47.6866 12.648 46.5986 10.952C45.5426 9.256 44.0386 8.408 42.0866 8.408C40.1346 8.408 38.6146 9.256 37.5266 10.952C36.4706 12.648 35.9426 15.064 35.9426 18.2C35.9426 21.208 36.4706 23.528 37.5266 25.16C38.6146 26.76 40.1346 27.56 42.0866 27.56ZM85.4771 25.352L82.5011 17.96L98.7731 1.4H109.717L85.4771 25.352ZM78.7571 35V1.4H88.2611V35H78.7571ZM100.021 35L87.7331 18.872L93.9731 13.496L110.917 35H100.021ZM109.582 35L122.974 1.4H130.654L143.95 35H134.494L128.734 19.4C128.414 18.536 128.126 17.736 127.87 17C127.614 16.264 127.374 15.544 127.15 14.84C126.926 14.136 126.702 13.416 126.478 12.68C126.286 11.944 126.11 11.144 125.95 10.28L127.486 10.232C127.294 11.16 127.086 11.992 126.862 12.728C126.67 13.464 126.462 14.168 126.238 14.84C126.014 15.512 125.758 16.216 125.47 16.952C125.214 17.688 124.926 18.504 124.606 19.4L118.846 35H109.582ZM116.11 29.432L118.942 22.712H134.494L137.134 29.432H116.11ZM147.137 35V1.4H162.641C164.913 1.4 166.945 1.864 168.737 2.792C170.529 3.72 171.921 4.984 172.913 6.584C173.937 8.184 174.449 10.024 174.449 12.104C174.449 14.344 173.937 16.328 172.913 18.056C171.921 19.784 170.529 21.144 168.737 22.136C166.945 23.096 164.913 23.576 162.641 23.576H156.065V35H147.137ZM165.137 35L156.593 19.832L166.337 18.632L175.841 35H165.137ZM156.065 16.76H161.345C162.177 16.76 162.865 16.6 163.409 16.28C163.985 15.928 164.417 15.464 164.705 14.888C165.025 14.28 165.185 13.576 165.185 12.776C165.185 12.008 165.025 11.352 164.705 10.808C164.385 10.232 163.905 9.8 163.265 9.512C162.657 9.192 161.889 9.032 160.961 9.032H156.065V16.76ZM176.18 35L189.572 1.4H197.252L210.548 35H201.092L195.332 19.4C195.012 18.536 194.724 17.736 194.468 17C194.212 16.264 193.972 15.544 193.748 14.84C193.524 14.136 193.3 13.416 193.076 12.68C192.884 11.944 192.708 11.144 192.548 10.28L194.084 10.232C193.892 11.16 193.684 11.992 193.46 12.728C193.268 13.464 193.06 14.168 192.836 14.84C192.612 15.512 192.356 16.216 192.068 16.952C191.812 17.688 191.524 18.504 191.204 19.4L185.444 35H176.18ZM182.708 29.432L185.54 22.712H201.092L203.732 29.432H182.708ZM220.455 25.352L217.479 17.96L233.751 1.4H244.695L220.455 25.352ZM213.735 35V1.4H223.239V35H213.735ZM234.999 35L222.711 18.872L228.951 13.496L245.895 35H234.999ZM256.8 35V9.608H246.624V1.4H276.816V9.608H266.304V35H256.8ZM282.067 35V1.4H306.499V9.224H291.187V27.176H307.219V35H282.067ZM286.579 21.656V14.264H304.579V21.656H286.579ZM313.468 35V1.4H328.972C331.244 1.4 333.276 1.864 335.068 2.792C336.86 3.72 338.252 4.984 339.244 6.584C340.268 8.184 340.78 10.024 340.78 12.104C340.78 14.344 340.268 16.328 339.244 18.056C338.252 19.784 336.86 21.144 335.068 22.136C333.276 23.096 331.244 23.576 328.972 23.576H322.396V35H313.468ZM331.468 35L322.924 19.832L332.668 18.632L342.172 35H331.468ZM322.396 16.76H327.676C328.508 16.76 329.196 16.6 329.74 16.28C330.316 15.928 330.748 15.464 331.036 14.888C331.356 14.28 331.516 13.576 331.516 12.776C331.516 12.008 331.356 11.352 331.036 10.808C330.716 10.232 330.236 9.8 329.596 9.512C328.988 9.192 328.22 9.032 327.292 9.032H322.396V16.76ZM363.05 35V1.4H371.354L383.594 21.32L377.114 21.272L389.498 1.4H397.514V35H388.346V26.024C388.346 23.144 388.41 20.552 388.538 18.248C388.698 15.944 388.954 13.656 389.306 11.384L390.362 14.216L381.77 27.512H378.602L370.202 14.216L371.258 11.384C371.61 13.528 371.85 15.736 371.978 18.008C372.138 20.248 372.218 22.92 372.218 26.024V35H363.05ZM400.672 35L414.064 1.4H421.744L435.04 35H425.584L419.824 19.4C419.504 18.536 419.216 17.736 418.96 17C418.704 16.264 418.464 15.544 418.24 14.84C418.016 14.136 417.792 13.416 417.568 12.68C417.376 11.944 417.2 11.144 417.04 10.28L418.576 10.232C418.384 11.16 418.176 11.992 417.952 12.728C417.76 13.464 417.552 14.168 417.328 14.84C417.104 15.512 416.848 16.216 416.56 16.952C416.304 17.688 416.016 18.504 415.696 19.4L409.936 35H400.672ZM407.2 29.432L410.032 22.712H425.584L428.224 29.432H407.2ZM438.227 35V1.4H453.731C456.003 1.4 458.035 1.864 459.827 2.792C461.619 3.72 463.011 4.984 464.003 6.584C465.027 8.184 465.539 10.024 465.539 12.104C465.539 14.344 465.027 16.328 464.003 18.056C463.011 19.784 461.619 21.144 459.827 22.136C458.035 23.096 456.003 23.576 453.731 23.576H447.155V35H438.227ZM456.227 35L447.683 19.832L457.427 18.632L466.931 35H456.227ZM447.155 16.76H452.435C453.267 16.76 453.955 16.6 454.499 16.28C455.075 15.928 455.507 15.464 455.795 14.888C456.115 14.28 456.275 13.576 456.275 12.776C456.275 12.008 456.115 11.352 455.795 10.808C455.475 10.232 454.995 9.8 454.355 9.512C453.747 9.192 452.979 9.032 452.051 9.032H447.155V16.76ZM478.55 25.352L475.574 17.96L491.846 1.4H502.79L478.55 25.352ZM471.83 35V1.4H481.334V35H471.83ZM493.094 35L480.806 18.872L487.046 13.496L503.99 35H493.094ZM502.655 35L516.047 1.4H523.727L537.023 35H527.567L521.807 19.4C521.487 18.536 521.199 17.736 520.943 17C520.687 16.264 520.447 15.544 520.223 14.84C519.999 14.136 519.775 13.416 519.551 12.68C519.359 11.944 519.183 11.144 519.023 10.28L520.559 10.232C520.367 11.16 520.159 11.992 519.935 12.728C519.743 13.464 519.535 14.168 519.311 14.84C519.087 15.512 518.831 16.216 518.543 16.952C518.287 17.688 517.999 18.504 517.679 19.4L511.919 35H502.655ZM509.183 29.432L512.015 22.712H527.567L530.207 29.432H509.183ZM551.73 35.48C549.33 35.48 547.186 35.208 545.298 34.664C543.442 34.12 541.794 33.336 540.354 32.312C538.946 31.288 537.682 30.088 536.562 28.712L542.13 22.424C543.73 24.504 545.378 25.896 547.074 26.6C548.77 27.272 550.418 27.608 552.018 27.608C552.722 27.608 553.362 27.544 553.938 27.416C554.514 27.256 554.946 27.016 555.234 26.696C555.554 26.344 555.714 25.912 555.714 25.4C555.714 24.952 555.586 24.568 555.33 24.248C555.074 23.928 554.722 23.656 554.274 23.432C553.826 23.176 553.33 22.952 552.786 22.76C552.242 22.568 551.698 22.424 551.154 22.328C550.61 22.2 550.082 22.072 549.57 21.944C547.682 21.528 546.034 21 544.626 20.36C543.218 19.72 542.034 18.968 541.074 18.104C540.146 17.208 539.442 16.184 538.962 15.032C538.514 13.88 538.29 12.584 538.29 11.144C538.29 9.576 538.658 8.136 539.394 6.824C540.13 5.512 541.106 4.392 542.322 3.464C543.538 2.504 544.93 1.784 546.498 1.304C548.098 0.791998 549.762 0.535997 551.49 0.535997C553.858 0.535997 555.874 0.775998 557.538 1.256C559.202 1.704 560.594 2.36 561.714 3.224C562.866 4.088 563.858 5.096 564.69 6.248L559.026 11.72C558.354 10.984 557.618 10.376 556.818 9.896C556.05 9.416 555.25 9.064 554.418 8.84C553.586 8.584 552.738 8.456 551.874 8.456C551.074 8.456 550.37 8.536 549.762 8.696C549.186 8.856 548.738 9.096 548.418 9.416C548.098 9.704 547.938 10.104 547.938 10.616C547.938 11.064 548.114 11.464 548.466 11.816C548.818 12.136 549.266 12.408 549.81 12.632C550.354 12.856 550.93 13.048 551.538 13.208C552.178 13.336 552.754 13.448 553.266 13.544C555.026 13.896 556.626 14.36 558.066 14.936C559.538 15.48 560.818 16.184 561.906 17.048C562.994 17.88 563.826 18.904 564.402 20.12C564.978 21.336 565.266 22.76 565.266 24.392C565.266 26.792 564.658 28.824 563.442 30.488C562.258 32.12 560.642 33.368 558.594 34.232C556.578 35.064 554.29 35.48 551.73 35.48Z"
+                        fill="black" />
+                </svg>
 
+                {{-- <h1 class="mb-5" style="font-weight: 900;">10 KARAKTER MARKAS</h1> --}}
+                <p class="mb-0 text-center mt-5 fw-ligth" style="font-size: 1.5rem">Sejak diinisiasi di tahun 2016,
+                    semangat #1000StartupDigital adalah untuk berkolaborasi membuat ekosistem startup Indonesia menjadi
+                    inklusif dan kolaboratif.</p>
+
+                <div class="mw-100 d-flex flex-wrap justify-content-center align-items-center my-5 py-5">
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🚀</span> VISIONARY</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">👟️</span> EXTRAMILE</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🧠</span> STRATEGIC</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🏆</span> GRIT</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">⚖</span> INTEGRITY</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🎯</span> FOCUSED</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🚅</span> AGILE</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🔥</span> PASSION</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">📚</span> RESOURCEFUL</h1>
+                    </div>
+                    <div class="px-5 rounded-pill border border-4 border-dark mx-2 my-3 py-1">
+                        <h1 class="d-flex fs-2 mb-0 mx-2 py-3"><span class="pe-2">🎨</span> CREATIVE</h1>
+                    </div>
+                </div>
+
+                <a href="#" class="bg-primary-color rounded-pill border-none fs-3 px-5 mb-0 py-3 text-white fw-bold"
+                   style="text-decoration: none;">
+                    <span class="mx-4 py-1">Cari Tahu Lebih</span>
+                </a>
+            </div>
+        </div>
+        {{-- end karakteristik section --}}
     </section>
 @endpush
