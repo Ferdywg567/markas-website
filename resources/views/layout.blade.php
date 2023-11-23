@@ -21,7 +21,7 @@
 
 <body class="bg-body-tertiary vh-100 vw-100">
     {{-- begin full width nav --}}
-    <nav class="navbar bg-body-tertiary" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
+    <nav class="navbar full-width-nav bg-body-tertiary" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
         <div class="container-fluid d-flex justify-content-between">
             <div class="navbar-brand ms-5">
                 <a href="#">
