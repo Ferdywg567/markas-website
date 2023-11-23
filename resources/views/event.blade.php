@@ -46,7 +46,7 @@
         }
 
         .search-form {
-            padding: 2rem !important;
+            padding: 1.6rem 2rem !important;
             border-radius: 100px 0 0 100px;
         }
         .booking-hero {
@@ -74,7 +74,7 @@
             </h2>
 
             <div class="input-group shadow-lg" style="border-radius: 100px">
-                <input class="form-control form-control-lg search-form py-3 px-4 border-0 light-placeholder" type="text"
+                <input class="form-control form-control-lg search-form border-0 light-placeholder" type="text"
                     placeholder="Cari event yang ada di MARKAS Surabaya">
                 <a class="btn bg-white pe-3 d-flex justify-content-center align-items-center" type="button"
                     id="button-addon2" style="border-radius: 0 100px 100px 0;">
