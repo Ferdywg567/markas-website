@@ -19,9 +19,11 @@
     <title>Markas</title>
 </head>
 
-<body class="bg-body-tertiary vh-100 vw-100" style="background-image: url('{{ asset('') }}assets/img/bg-footer.png'); background-repeat: repeat; background-size: 100%">
+<body class="bg-body-tertiary vh-100 vw-100"
+    style="background-image: url('{{ asset('') }}assets/img/bg-footer.png'); background-repeat: repeat; background-size: 100%">
     {{-- begin full width nav --}}
-    <nav class="navbar full-width-nav bg-body-tertiary" style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
+    <nav class="navbar full-width-nav bg-body-tertiary"
+        style="background-image: url({{ asset('') }}./assets/img/bg-nav.png)">
         <div class="container-fluid d-flex justify-content-between">
             <div class="navbar-brand ms-5">
                 <a href="#">
@@ -39,7 +41,7 @@
                     <a class="navbar-brand ms-5 primary-color" href="{{ route('about') }}">About</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Philosophy</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Events</a>
-                    <a class="navbar-brand ms-5 primary-color" href="{{route('book')}}">Booking</a>
+                    <a class="navbar-brand ms-5 primary-color" href="#">Booking</a>
                     <a class="navbar-brand ms-5 primary-color" href="#">Contact Us</a>
                 </span>
             </div>
@@ -67,10 +69,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Philosophy</a>
@@ -92,8 +94,7 @@
 
     @stack('body')
 
-
-    <footer>
+    <footer class="mt-5 pt-5">
         <div class="w-100 bg-primary-color">
             <div class="container pe-0"
                 style="transform: translateY(-4rem);background-image: url({{ asset('./assets/img/bg-footer.png') }});border-radius: 24px;border-style: solid;
