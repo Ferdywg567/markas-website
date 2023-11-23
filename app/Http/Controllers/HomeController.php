@@ -12,20 +12,22 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    #[Get('/','home')]
-    function index(): View
-    {
-        return view('home');
-    }
+	#[Get('/', 'home')]
+	function index(): View
+	{
+		return view('home');
+	}
 
-	#[Get('/about','about')]
-	function about() : View {
+	#[Get('/about', 'about')]
+	function about(): View
+	{
 		return view('about');
 	}
 
-	#[Get('/event','event')]
-	function event() : View {
-        $events = Event::all();
+	#[Get('/event', 'event')]
+	function event(): View
+	{
+		$events = Event::all();
 		return view('event', compact('events'));
 	}
 
@@ -40,4 +42,10 @@ class HomeController extends Controller
     function checkRoomDate(){
         return view('check-date');
     }
+
+	#[Get('/checkout2', 'checkout2')]
+	function checkout2(): View
+	{
+		return view('checkout2');
+	}
 }
