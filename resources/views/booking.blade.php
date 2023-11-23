@@ -109,6 +109,14 @@
         .facility-ul {
             columns: 2;
         }
+        .room-card {
+            cursor: pointer;
+            transition: all .5s ease;
+        }
+
+        .room-card:hover {
+            transform: scale(1.05);
+        }
     </style>
 @endpush
 
@@ -252,7 +260,9 @@
             <div class="room-section" style="margin-bottom: 20rem">
                 <h2 class="section-title mb-5">Tipe Ruangan</h2>
                 @foreach ($building->rooms as $item)
-                    <div class="card p-3 border border-1 border-black shadow-none mb-5" style="border-radius: 30px">
+                    <div data-link="{{ route('check-date') }}"
+                        class="card p-3 border border-1 border-black shadow-none mb-5 room-card"
+                        style="border-radius: 30px">
                         <div class="card-body">
                             <h4 class="place-name mb-4">{{ strtoupper($item->type) }}</h4>
                             <div class="row">
@@ -271,7 +281,7 @@
                                             <li>{{ $facility }}</li>
                                         @endforeach
                                     </ul>
-                                <p class="primary-color">Kapasitas Maksimal: {{$item->max_person}}</p>
+                                    <p class="primary-color">Kapasitas Maksimal: {{ $item->max_person }}</p>
                                 </div>
                             </div>
                         </div>
@@ -308,6 +318,11 @@
                 $(this).siblings().removeClass('active');
 
             });
+
+            $(".room-card").click(function(e) {
+                let href = $(this).data('link');
+                window.location = href
+            })
         });
     </script>
 @endpush
